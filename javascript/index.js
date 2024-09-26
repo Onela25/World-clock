@@ -19,3 +19,10 @@ capeTownTimeElement.innerHTML = capeTownTime.format("h:mm:ss[<small>]A[</small>]
 
 },1000);
 
+function updateCity(event) {
+   let cityTimeZone = event.target.value;
+}
+
+let citiesSelectElement =document.querySelector("#city");
+
+citiesSelectElement.addEventListener("change,updateCity")
