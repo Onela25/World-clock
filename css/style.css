@@ -1,42 +1,49 @@
 body {
-    background-image: url('images/pink clocks.jpeg');
+    background-image: url('/images/pinkclocks.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    height: 100vh;
+    margin: 0;
 }
 
 .container {
-max-width: 600px;
-margin: 60px auto;
-background-color: rgb(244, 223, 236);
-padding: 20px;
-border-radius: 10px;
-box-shadow: rgba (100, 100, 111, 0.2)0px 7px 29px 0px ;
-
+    max-width: 600px;
+    margin: 60px auto;
+    background-color: rgb(244, 223, 236);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .city {
-   display: flex; 
-   margin: 10px 0;
-   justify-content: space-between;
-   padding: 30px 0;
-   border-bottom: 1px dashed rgba(0,0,0,0.2);
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
+
 .city:last-child {
     border: none;
 }
+
 .city-info {
     display: flex;
-    justify-content: ;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .date {
-opacity:0.7 ;
+    opacity: 0.7;
+    margin-top: 5px;
 }
+
 .time {
     font-size: 48px;
     font-weight: bold;
 }
+
 .time small {
     font-size: 24px;
     vertical-align: middle;
@@ -48,23 +55,23 @@ h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 36px;
 }
+
 h2 {
     margin: 0 0 5px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 28px;
-  
-} 
+}
 
 footer {
     text-align: center;
     font-size: 18px;
-    color: rgba(0, 0, 0, 0.6) ;
+    color: rgba(0, 0, 0, 0.6);
 }
+
 select {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
     font-size: 18px;
     display: block;
-    
 }
