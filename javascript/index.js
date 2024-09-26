@@ -26,11 +26,11 @@ function updateCity(event) {
         let cityElement = document.createElement("div");
         cityElement.className = "city";
         cityElement.innerHTML = `
-            <div>
+            <div class="city-info">
                 <h2>${cityName}</h2>
                 <div class="date"></div>
-                <div class="time"></div>
             </div>
+            <div class="time"></div>
         `;
         document.querySelector("#cities").appendChild(cityElement);
 
