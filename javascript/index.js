@@ -21,7 +21,9 @@ setInterval(function() {
 
 function updateCity(event) {
     let cityTimeZone = event.target.value;
-    if (cityTimeZone) {
+    if (cityTimeZone) { 
+
+        document.querySelector("#cities").innerHTML ='';
         let cityName = cityTimeZone.split("/")[1].replace("_", " ");
         let cityElement = document.createElement("div");
         cityElement.className = "city";
