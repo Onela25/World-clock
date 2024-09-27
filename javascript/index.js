@@ -24,26 +24,26 @@ function updateCity(event) {
     
     if (cityTimeZone === "current") { 
         cityTimeZone = moment.tz.guess();
-
-        document.querySelector("#cities").innerHTML ='';
-        let cityName = cityTimeZone.split("/")[1].replace("_", " ");
-        let cityElement = document.createElement("div");
-        cityElement.className = "city";
-        cityElement.innerHTML = `
-            <div class="city-info">
-                <h2>${cityName}</h2>
-                <div class="date"></div>
-            </div>
-            <div class="time"></div>
-        `;
-        document.querySelector("#cities").appendChild(cityElement);
-
-        setInterval(function() {
-            let cityTime = moment().tz(cityTimeZone);
-            cityElement.querySelector(".date").innerHTML = cityTime.format("MMMM Do YYYY");
-            cityElement.querySelector(".time").innerHTML = cityTime.format("h:mm:ss[<small>]A[</small>]");
-        }, 1000);
     }
+
+    document.querySelector("#cities").innerHTML = '';
+    let cityName = cityTimeZone.split("/")[1].replace("_", " ");
+    let cityElement = document.createElement("div");
+    cityElement.className = "city";
+    cityElement.innerHTML = `
+        <div class="city-info">
+            <h2>${cityName}</h2>
+            <div class="date"></div>
+        </div>
+        <div class="time"></div>
+    `;
+    document.querySelector("#cities").appendChild(cityElement);
+
+    setInterval(function() {
+        let cityTime = moment().tz(cityTimeZone);
+        cityElement.querySelector(".date").innerHTML = cityTime.format("MMMM Do YYYY");
+        cityElement.querySelector(".time").innerHTML = cityTime.format("h:mm:ss[<small>]A[</small>]");
+    }, 1000);
 }
 
 let citiesSelectElement = document.querySelector("select[name='city']");
