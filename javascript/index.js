@@ -36,6 +36,7 @@ function updateCity(event) {
             <div class="date"></div>
         </div>
         <div class="time"></div>
+        <a href="index.html">All cities</a>
     `;
     document.querySelector("#cities").appendChild(cityElement);
 
